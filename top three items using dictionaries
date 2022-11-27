@@ -1,0 +1,10 @@
+#python program to get the top three items in a shop using dictionaries.
+from heapq import nlargest
+from operator import itemgetter
+n=int(input())
+lista={}
+for i in range(n):
+    l=input().split(":")
+    lista.update(dict({l[0]:l[1]}))
+for name, value in nlargest(3,lista.items(),key=itemgetter(1)):
+    print(name,value)
