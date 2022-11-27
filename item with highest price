@@ -1,0 +1,15 @@
+ 3python program to get a item in a bill which has the highest price.
+d1={}
+
+lista=[]
+n=int(input())
+for i in range(n):
+    l=input().split(" ")
+    d1.update(dict({l[0]:float(l[1])}))
+
+my_max_val = 0
+for k,v in d1.items():
+    if v > my_max_val:
+        my_max_val=v
+        my_max_key=k
+print(my_max_key,my_max_val)
