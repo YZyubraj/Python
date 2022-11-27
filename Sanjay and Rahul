@@ -1,0 +1,29 @@
+#Sanjay and Rahul have a set of color crayons. Sanjay has a set of colors whereas Rahul has a set of colors. 
+#Write a program to find the colors they have in common. 
+#Print the colors that Rahul has but not Sanjay. Sanjay lost his Green color. Update this information.  
+#Note: Sort the sets before printing
+
+Sanjay=[] # list of the colors that Sanjay has
+
+Rahul=[]  # list of the colors that Rahul has
+Sanjay = [(item) for item in input().split()] #taking input of colors of Sanjay
+  
+Rahul = [item for item in input().split()] #taking input of colors of Rahul
+
+
+
+common=[value for value in Sanjay if value in Rahul]
+
+res = []
+[res.append(x) for x in common if x not in res]
+res.sort()
+print(res) #printing common color in Rahul & Sanjay
+
+pex=[]
+[pex.append(x) for x in Rahul if x not in Sanjay]
+pex.sort()
+print(pex) #color that Rahul has but not Sanjay
+
+Sanjay.remove('green')
+Sanjay.sort()
+print(Sanjay) #after removing green color
