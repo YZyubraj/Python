@@ -1,0 +1,16 @@
+#Let P represent Paper, R represent Rock and S represent Scissors. 
+#Given 2 out of the 3 determine which wins. If it's a drawing print D. 
+#Use Dictionary concept to get the result.
+
+my_dict={'P':'S', 'R':'P', 'S':'R'}
+
+lsita=[]
+lsita=[(item) for item in input().split() ]
+if lsita[0]==lsita[1]:
+    print("D")
+if 'P' in lsita and 'R' in lsita:
+    print(my_dict['R'])
+if 'P' in lsita and 'S' in lsita:
+    print(my_dict['P'])
+if 'S' in lsita and 'R' in lsita:
+    print(my_dict['S'])
