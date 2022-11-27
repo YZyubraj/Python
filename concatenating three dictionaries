@@ -1,0 +1,25 @@
+#python  program to concatenate three dictionaries to create a new one. 
+
+n=int(input())
+d1={}
+d2={}
+d3={}
+i = 0
+while i < 3*n:
+    l = input().split(":")
+    if len(d1) != n:
+        d1.update(dict({l[0]:l[1]}))
+    elif len(d2) != n:
+        d2.update({l[0]:l[1]})
+    else:
+        d3.update({l[0]:l[1]})
+    i += 1
+print()
+l1=[]
+l2=[]
+d = {**d1,**d2,**d3}
+for i in d.items():
+    l1.append(i)
+    l2.append(dict(l1))
+    l1.pop()
+print(l2)
