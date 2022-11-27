@@ -1,0 +1,9 @@
+#python program to replace the last element in a set with another set. 
+lista=[]
+listb=[]
+
+lista=list(map(int,input().split()))
+listb=list(map(int,input().split()))
+
+listc=lista[0:(len(lista)-1)]+listb
+print(listc)
