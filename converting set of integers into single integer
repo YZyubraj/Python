@@ -1,0 +1,4 @@
+#Python program to convert a set of integers into a single integer
+n=list(map(int,input().split()))
+mystring=' '.join(map(str,n))
+print(mystring.replace(" ",""))
