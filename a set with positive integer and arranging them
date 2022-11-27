@@ -1,0 +1,6 @@
+#Python program to create a set with the positive integers and arrange the numbers in ascending order.
+lista=[]
+while True:
+    lista=list(map(int,input().split()))
+    break
+print(sorted(lista))
